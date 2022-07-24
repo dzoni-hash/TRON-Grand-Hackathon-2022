@@ -81,7 +81,7 @@ const PayOut = () => {
   const amountInformation = () => {
     return (
       <div>
-        <h2>Total amount to receive on Nile network</h2>
+        <h2>Total amount to receive on Shasta network</h2>
         <Card className='amount' style={{ width: 'fit-content' }}>
           <Card.Body className='cardBody'>
             <h3> {tokenBalance.toFixed(8)} {paymentOption === 'stableCoin' ? 'USDT' : 'TRX'} </h3>

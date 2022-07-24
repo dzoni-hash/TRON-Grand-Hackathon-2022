@@ -3,7 +3,7 @@ const tronWeb = require("../contract/tronWeb");
 async function getPackagePricesContract() {
   let res;
   try {
-    res = await tronWeb.contract().at(process.env.NILE_PACKAGE_PRICES_ADDRESS);
+    res = await tronWeb.contract().at(process.env.PACKAGE_PRICES_CONTRACT_ADDRESS);
   } catch (e) {
     console.log(e);
   }

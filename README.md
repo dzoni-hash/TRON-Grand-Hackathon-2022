@@ -20,7 +20,7 @@ A service running on Raspberry Pi which uses a breadboard, some LEDs and buttons
 
 * ### Recycling Machine server and client
 
-Used for user interaction with the machine and interaction between the recycling machine and smart contracts on TRON Nile testnet network. The Recycling Machine supports payments on Nile network in TRX or USDT tokens. There is also an option to donate the money.
+Used for user interaction with the machine and interaction between the recycling machine and smart contracts on TRON Shasta testnet network. The Recycling Machine supports payments on Shasta network in TRX or USDT tokens. There is also an option to donate the money.
 
 ## Technologies
 * React
@@ -38,7 +38,7 @@ Used for user interaction with the machine and interaction between the recycling
 ## Prerequisites
 * [Node 12+](https://nodejs.org/en/download/)
 * [Yarn](https://classic.yarnpkg.com/en/docs/install/)
-* [TronLink wallet](https://www.tronlink.org/) - we have used [TRON Nile testnet](https://nile.tronscan.org/#/)
+* [TronLink wallet](https://www.tronlink.org/) - we have used [TRON Shasta testnet](https://shasta.tronscan.org/#/)
 * Raspberry Pi 3B/3B+/4B, a breadboard, LEDs, buttons. If not available, see [the option without Raspberry Pi](https://github.com/dzoni-hash/TRON-Grand-Hackathon-2022/tree/main/recycling_machine_emulator#option-without-a-raspberry-pi)
 * Docker
 

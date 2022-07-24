@@ -23,7 +23,7 @@ getTRXUSDPrice = async () => {
 async function getRecyclingMachineContract() {
   let res;
   try {
-    res = await tronWeb.contract().at(process.env.NILE_RECYCLING_MACHINE_ADDRESS);
+    res = await tronWeb.contract().at(process.env.RECYCLING_MACHINE_CONTRACT_ADDRESS);
     console.log(res);
   } catch (e) {
     console.log(e);
@@ -67,7 +67,7 @@ module.exports = function (app) {
       await recyclingMachineContract.withdraw().send({
         feeLimit: 100_000_000,
         callValue: 0,
-        shouldPollResponse: true
+        shouldPollResponse: false
       });
       res.send("Success!");
     } catch (err) {
@@ -92,7 +92,7 @@ module.exports = function (app) {
 
       const tokenPrice = await getTRXUSDPrice();
 
-      let amount = /*getCurrentBalance()*/ 100 / 100;
+      let amount = getCurrentBalance() / 100;
       if (!req.body.isStableCoin) {
         amount = (amount / tokenPrice).toFixed(6);
       }
@@ -102,7 +102,7 @@ module.exports = function (app) {
       let ret = await recyclingMachineContract.payOut(req.body.receiver, amount * 1000000, req.body.isStableCoin).send({
         feeLimit: 100_000_000,
         callValue: 0,
-        shouldPollResponse: true
+        shouldPollResponse: false
       });
       console.log(ret);
       console.log("Payment completed successfully");
@@ -119,11 +119,11 @@ module.exports = function (app) {
       const recyclingMachineContract = await getRecyclingMachineContract();
       console.log("Adding donation:", getCurrentBalance(), "[cents]");
       const tokenPrice = await getTRXUSDPrice();
-      const amount = (/*getCurrentBalance()*/ 100 / 100 / tokenPrice).toFixed(6);
+      const amount = (getCurrentBalance() / 100 / tokenPrice).toFixed(6);
       await recyclingMachineContract.donate(amount * 1000000).send({
         feeLimit: 100_000_000,
         callValue: 0,
-        shouldPollResponse: true
+        shouldPollResponse: false
       });
       console.log("Donation completed successfully");
       res.send("Thank you for your donation!");
