@@ -77,6 +77,7 @@ yarn start [backend-service-ip-address]:3050/api
 - That's it! All the services should be up and running!
 
 ## Demo
+https://www.youtube.com/watch?v=eaNuWmwuax8&feature=youtu.be
 
 ## Future work/TODO
 Implement a back office web3 app, which will be used to manage the recycling machine contracts. It will allow administrator to deploy a new Recycling Machine contracts, manage existing ones and follow theirs statistics. For example, admin could see the balance, total amount donated, number of payouts, etc.
