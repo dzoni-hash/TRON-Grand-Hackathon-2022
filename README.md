@@ -1,7 +1,7 @@
 # TRON Grand Hackathon 2022
 
 <div align="center">
-    <img src = "IMG_20211127_182429.jpg" width = "800px"/>
+    <img src = "IMG_0273.jpg" width = "800px"/>
 </div>
 
 #### Track: DeFi Track
