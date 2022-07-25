@@ -1,4 +1,4 @@
-# TRON Grand Hackathon 2022
+# Crypto Recycling Machine, TRON Grand Hackathon 2022
 
 <div align="center">
     <img src = "IMG_0273.jpg" width = "800px"/>
